@@ -1,0 +1,21 @@
+h1{
+    text-align:justify;
+    color: cornflowerblue;
+}
+h3{
+    text-transform:initial;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:justify 20px;
+}
+.destacado{
+    color: crimson;
+}
+img{
+    box-shadow: 12px 10px 10px 0px rgba(0,0,0,0.24);
+    position:200px;
+    padding-right: 30px; margin: 20px;float: right;border-radius: 62px 18px 63px 18px;
+}
+img:hover{
+    filter: grayscale(20%) brightness(85%);
+    margin-block-end: 30px;
+}
