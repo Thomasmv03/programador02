@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color:lightskyblue;">
+        <H1>Cine Boost</H1>
+        <p style="background-color: lightblue;"><strong>Peliculas en cartelera.</strong></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Spider Man 3</h4>
+                <img src="piter.png" class="img-thumbnail" alt="200x100">
+                <table class="table">
+                    <button type="button" class="btn btn-warning">COMPRAR ENTRADA</button>
+
+                    <table class="table table-dark table-hover">
+                        <tr style="background-color: lightgoldenrodyellow;">
+                            <th scope="col">Horarios</th>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Miercoles</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">16:30</th>
+                                <td>Sala 2</td>
+                                <td>Sala 1 sub</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">18:00</th>
+                                <td>Sala 3 sub</td>
+                                <td>Sala 2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20:30</th>
+                                <td>Sala 1</td>
+                            </tr>
+                    </table>
+            </div>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Sipnosis
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Después de que la identidad de Peter Parker como Spider-Man es expuesta
+                        por Mysterio al final de Spider-Man: Lejos de casa, la vida y la reputación de Parker son
+                        puestas patas arriba. Para arreglar este asunto, Peter decide contactar al Dr. Stephen Strange
+                        para que este lo ayude a restaurar su antigua identidad secreta con magia, pero a raíz de esto,
+                        algo sale terriblemente mal en el encantamiento y provoca una fractura en el multiverso,
+                        causando que cinco supervillanos de otras realidades alternas (que previamente han luchado
+                        contra un Spider-Man en sus respectivas dimensiones) ingresen a su universo</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Reparto y protagonista
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Holland se meterá una vez más en la piel de Peter Parker, un personaje
+                        que disparó su fama y en la que encaja como un guante. Además, no tardaremos en verle de nuevo
+                        encabezando una franquicia multimillonaria, ya que también será el protagonista de la muy
+                        esperada película de 'Uncharted'. No es el único que repite respecto a las dos anteriores
+                        entregas, pues Zendaya volverá a ser MJ, Jacob Batalon regresa como Ned Leeds, Marisa Tomei como
+                        May Parker, Tony Revolori como Flash Thompson y Angourie Rice como Betty Brant. Otros que no dan
+                        vida por primera vez a sus personajes serán Jamie Foxx y Alfred Molina como Electro y el Doctor
+                        Octopus, pero en su caso fue en encarnaciones previas del trepamuros. Eso ha dado pie a
+                        especular con otros regresos como los de Tobey Maguire y Andrew Garfield como Spider-Man, pero
+                        no hay nada confirmado al respecto. Llenando el vacío dejado por el Iron Man de Robert Downey
+                        Jr. encontraremos a Benedict Cumberbatch como el Doctor Strange, quien asumirá el papel de
+                        mentor de Park</div>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="wallpaper-spider-man-no-way-home.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <video src="SPIDER-MAN_ SIN CAMINO A CASA - Tráiler Oficial.mp4" controls>
+                            </video>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="spider-man-no-way-home_3840x2160_xtrafondos.com.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
