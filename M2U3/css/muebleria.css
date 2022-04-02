@@ -1,0 +1,69 @@
+/* font-family: 'Itim', cursive; */
+
+footer{
+    background-color: lightskyblue;
+}
+
+h1, h2{
+    font-family: "Itim" cursive;
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+h5{
+    color: black;
+}
+.hero {
+    background: url(../img/sillon.jpg) no-repeat;
+    background-size: cover;
+    height: 0,5vh;
+    min-height: 500px;
+    color: white;
+}
+
+.lista-novedades {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lista-novedades li {
+    margin: 8px 0;
+}
+.lista-novedades li a {
+    background-color: #fff;
+    font-family: "Itim", cursive;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+.lista-novedades li a:hover {
+    color: #212529;
+    background-color: #dadada;
+}
+.lista-novedades li a img {
+    width: 200px;
+    height: 90px;
+    filter: grayscale();
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+.lista-novedades li a:hover img {
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
+
+.testimonios{
+    background-color: #a51c1c;
+    padding-bottom: 4rem !important;
+}
+.testimonio{
+    text-align: center;
+    padding: 50px 20px;
+}
