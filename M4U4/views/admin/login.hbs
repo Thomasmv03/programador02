@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/stylesheets/muebleria.css">
+
+<div class="container" style="margin: 150px;">
+  <div class="row">
+    <div class="col">
+      <form action="/admin/login" method="post">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" name="usuario">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    
+    {{#if error}}
+    <p >Usuario y/o contraseña incorrectos</p>
+    {{/if}}
+    </div>
+  </div>
+</div>
