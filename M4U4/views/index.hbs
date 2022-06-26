@@ -1,3 +1,35 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Muebles al mundo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> Inicio </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Nosotros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Ubicacion</a>
+                    <a class="dropdown-item" href="#">Historia</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-outline-primary">Buscar</button>
+        </form>
+    </div>
+</nav>
 <div class="container-fluid">
     <div id="home" class="row align-items-center hero">
         <div class="col-lg-4 offset-lg-2">
@@ -11,15 +43,14 @@
         <div class="col-md-5 offset-md-2 py-3">
             <h2>Novedades</h2>
             <ul class="lista-novedades">
-                <li><a href="#" data-toggle="modal" data-target="#modal1">
-                        <img src="images/muebleria.jpg"> Nueva promocion</a></li>
-                <li><a href="#"><img src="images/sillon.jpg"> Nueva promocion</a></li>
-                <li><a href="#"><img src="images/muebleria.jpg"> Nueva promocion</a></li>
+                {{#each novedades}}
+                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}">{{titulo}}</a></li>
+                {{/each}}
             </ul>
         </div>
         <!-- fin de novedades -->
         <!-- Carrusel -->
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="rounded py-3 testimonios">
                 <h2 class="text-center">Clientes</h2>
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -32,22 +63,22 @@
                         <div class="carousel-item active">
                             <img src="images/pepe.jpg" class="d-block w-100" alt="...">
                             <div class="testimonio">
-                                <h5> Excenlete la calidad de los muebles </h5>
+                                <h4> Excelente la calidad de los muebles </h4>
                                 <p> Adrian, Entre Rios </p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="images/milei.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5> Super recomendable, los mejores precios </h5>
-                                <p> Juan Cruz, Bs.As</p>
+                            <div class="testimonio">
+                                <h4> Super recomendable, los mejores precios </h4>
+                                <p> Juan Cruz, Bs.As </p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="images/betoli.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Me sorprendio al ver los precios y su calidad, quede asombrado por el gran trabajo</h5>
-                                <p>Santiago, Republica de Siria</p>
+                            <div class="testimonio">
+                                <h4> Me sorprendio al ver los precios y su calidad, quede asombrado por el gran trabajo de la empresa </h4>
+                                <p> Santiago, Republica de Siria </p>
                             </div>
                         </div>
                     </div>
@@ -63,17 +94,19 @@
             </div>
             <!-- fin del carrusel -->
             <!-- Modal 1 -->
-            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {{#each novedades}}
+            <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Oferta imperdible</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            Oferta Mesa ratoneta a $4500
+                           <h6>{{subtitulo}}</h6>
+                           <p>{{cuerpo}}</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -81,14 +114,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- Fin del modal 1 -->
             </div>
+            {{/each}}
+            {{!-- fin modal --}}
         </div>
     </div>
     <!-- Dueños -->
-    <div id="dueños" class="row align-items-center my-3 staff py-2">
-        <div class="col-lg-8 offset-lg2">
-            <h2>Dueños</h2>
+    <div id="dueños" class="row align-items-center my-4 staff py-4">
+        <div class="col-lg-9 offset-lg2">
+            <h2 class="text-center">Dueños</h2>
             <div class="card-deck">
                 <div class="card">
                     <img src="images/abuelo.jpg" class="card-img-top" alt="...">
@@ -121,8 +155,8 @@
     </div>
 
     <div id="conocenos" class="row py-4">
-        <div class="col-md-4 offset-md-2">
-            <h2>Visitanos</h2>
+        <div class="col-md-5 offset-md-2">
+            <h2 class="text-left">Visitanos</h2>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4412199064386!2d-58.43169458508789!3d-34.567700763099594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5a12c181347%3A0xcc951cbda99d485e!2sAv.%20del%20Libertador%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1652304625417!5m2!1ses-419!2sar"
@@ -131,7 +165,7 @@
             </div>
         </div>
         <div id="contactanos" class="col-md-4 mt-4 mt-sm-0">
-            <h2>Contactanos</h2>
+            <h2 class="text-center">Contactanos</h2>
             <form action="/" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -142,17 +176,17 @@
                         <label for="surname">Apellido</label>
                         <input type="text" class="form-control" name="surname" id="apellido">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label for="phone">Telefono</label>
                         <input type="tel" class="form-control" name="phone" id="phone" placeholder="...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label for="message">Mensaje</label>
                         <textarea class="form-control" id="message" name="message" rows="4"></textarea>
                         <br>
@@ -168,5 +202,7 @@
 
 <!-- Fin de dueños -->
 <footer>
-    <p class="text-center"> Diseñado por: Thomas Montenegro</p>
+    <p class="text-center"> Diseñado por: Thomas Montenegro </p>
 </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
