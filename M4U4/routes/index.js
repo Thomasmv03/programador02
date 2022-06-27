@@ -5,6 +5,10 @@ var novedadesModel = require('./../models/novedadesModel');
 var cloudinary = require('cloudinary').v2;
 
 /* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index');
+});
+
 router.get('/', async function(req, res, next) {
   var novedades = await novedadesModel.getNovedades()
   novedades = novedades.splice(0, 5);
@@ -45,7 +49,7 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'thomi14mb@gmail.com',
     subject: 'contacto desde la web',
-    html: nombre + "." +  apellido + "se contacto a traves y quiere mas info a este correo:" + email +  ". <br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es telefono " + telefono
+    html: nombre + "." +  apellido + " se contacto a traves y quiere mas info a este correo:" + email +  ". <br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es telefono " + telefono
   }
 
   var transporter = nodemailer.createTransport({
