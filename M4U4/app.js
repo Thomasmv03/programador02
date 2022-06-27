@@ -6,12 +6,14 @@ var logger = require('morgan');
 
 require('dotenv').config();
 var session = require('express-session');
+var pool = require('./models/bd');
 var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
+var contactoRouter = require('./routes/contacto');
 
 var app = express();
 
@@ -29,7 +31,7 @@ app.use(session({
   secret: '2231hegd64nmshakqy3',
   resave: false,
   saveUninitialized: true
-}))
+}));
 
 secured = async (req, res, next) => {
   try {
@@ -53,6 +55,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
+app.use('/contacto', contactoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
