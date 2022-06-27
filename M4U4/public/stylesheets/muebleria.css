@@ -1,7 +1,7 @@
 /* font-family: 'Itim', cursive; */
 
 footer {
-    background-color: gray;
+    background-color: rgb(57, 63, 61);
 }
 
 h1 {
@@ -10,6 +10,7 @@ h1 {
 
 h2 {
     font-size: 1.7em;
+
 }
 
 h3 {
@@ -81,7 +82,7 @@ h5 {
 
 .testimonios {
     font-family: "Itim", cursive;
-    background-color: #1c5ca5;
+    background-color: #464b50;
     padding-bottom: 4rem !important;
 }
 
@@ -90,6 +91,9 @@ h5 {
     text-align: center;
     padding: 50px 20px;
 }
+.staff {
+    background-color: rgb(57, 63, 61);
+  }
 
 button {
     font-size: 1.25em;
