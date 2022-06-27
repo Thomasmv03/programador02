@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', async (req, res, next) => {
+/*router.post('/', async (req, res, next) => {
   var nombre = req.body.nombre;
   var apellido = req.body.apellido;
   var email = req.body.email;
@@ -36,5 +36,5 @@ router.post('/', async (req, res, next) => {
   res.render('index', {
     message: "Mnesaje enviado correctamente",
   });
-});
+});*/
 module.exports = router;

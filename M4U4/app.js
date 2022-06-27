@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 require('dotenv').config();
 var session = require('express-session');
-var pool = require('./models/bd');
+/*var pool = require('./models/bd');*/
 var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
