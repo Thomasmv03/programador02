@@ -49,7 +49,7 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'thomi14mb@gmail.com',
     subject: 'contacto desde la web',
-    html: nombre + "." +  apellido + " se contacto a traves y quiere mas info a este correo:" + email +  ". <br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es telefono " + telefono
+    html: nombre + " " + apellido + " se contacto a traves y quiere mas info a este correo:" + email + ". <br> Ademas, hizo el siguiente comentario: " + mensaje + ". <br> su tel es telefono " + telefono
   }
 
   var transporter = nodemailer.createTransport({
@@ -63,9 +63,15 @@ router.post('/', async (req, res, next) => {
 
   var info = await transporter.sendMail(obj);
 
-  res.render('index', {
+  /*res.render('index', {
     message: "Mensaje enviado correctamente",
   });
+});*/
+  
+  res.json({
+    message: 'Mensaje enviado correctamente',
+  });
+
 });
 
 

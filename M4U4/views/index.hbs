@@ -163,7 +163,7 @@
         </div>
         <div id="contactanos" class="col-md-4 mt-4 mt-sm-0">
             <h2 class="text-center">Contactanos</h2>
-            <form action="/" method="post">
+            <form action="/" method="post" id="contact_form">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="name">Nombre</label>
@@ -188,6 +188,7 @@
                         <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
                         <br>
                         <button type="submit" class="btn btn-primary">Enviar</button>
+                        <span id="feedback"></span>
                     </div>
             </form>
             {{#if message}}
