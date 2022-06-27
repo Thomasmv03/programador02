@@ -1,4 +1,4 @@
-const { isAsyncFunction } = require('util/types');
+/*const { isAsyncFunction } = require('util/types');*/
 var pool = require('./bd');
 
 async function getNovedades (){
